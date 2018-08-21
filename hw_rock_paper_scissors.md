@@ -14,7 +14,7 @@ Create a simple sinatra app to allow the user to play rock, paper, scissors in t
 
 - Add a welcome page (and a route to get it) to explain the rules before the user picks their move. Add a link to this on the result view. DONE
 
-- Add some CSS to either/both of your pages.
+- Add some CSS to either/both of your pages. DONE
 
 ### Further extension:
 

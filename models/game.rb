@@ -9,20 +9,23 @@ class Game
 
 
   def result
-    return "draw" if @player1_value == @player2_value
+    player1_wins = " Player 1 wins using #{@player1_value}!"
+    player2_wins = " Player 2 wins using #{@player2_value}!"
 
 
-    if @player1_value == "scissors"
-      return "#{@player1_value} wins" unless @player2_value == "rock"
-      return "#{@player2_value} wins"
+    return "Is a draw!" if @player1_value == @player2_value
 
-    elsif @player1_value == "rock"
-      return "#{@player1_value} wins" unless @player2_value == "paper"
-      return "#{@player2_value} wins"
+    case @player1_value
 
-    elsif @player1_value == "paper"
-      return "#{@player1_value} wins" unless @player2_value == "scissors"
-      return "#{@player2_value} wins"
+    when "scissors"
+      return player1_wins unless @player2_value == "rock"
+      return player2_wins
+    when "rock"
+      return player1_wins unless @player2_value == "paper"
+      return player2_wins
+    when "paper"
+      return player1_wins unless @player2_value == "scissors"
+      return player2_wins
     end
 
   end
